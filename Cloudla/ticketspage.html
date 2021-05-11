@@ -80,9 +80,33 @@
           <input type="email" id="email" name="email" required maxlength="30"></br>
           <label for="name">Name</label></br>
           <input type="name" id="name" name="name" required maxlength="30"></br>
-          <button type="submit">Sign in</button>
+          <button type="submit" onclick="send();">Sign in</button>
       </form>
     </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script> 
+      // Your web app's Firebase configuration
+      var firebaseConfig = {  
+        apiKey: "AIzaSyDZhBZ1UL7XJYn7caWUb-sKIkfc6rvBRIc",
+        authDomain: "login-5eb40.firebaseapp.com",
+        databaseURL: "https://login-5eb40-default-rtdb.firebaseio.com",
+        projectId: "login-5eb40",
+        storageBucket: "login-5eb40.appspot.com",
+        messagingSenderId: "522985641868",
+        appId: "1:522985641868:web:aa24b7e27a7a89ffe4a8a9"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      var database = firebase.database();  
+    </script>
+        <script src="login.js"></script>
   </body>
     
     <div class="row">
